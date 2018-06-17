@@ -2,7 +2,7 @@
 capture log close
 ** New data path to encrypted dataset
 cd "X:\OneDrive - The University of the West Indies\repo_encrypted\data_test\"
-mkdir log2
+cap mkdir log
 ** Local macro to hold DO file path
 local path "C:\Sync\OneDrive - The University of the West Indies\repo_datagroup\repo_test\do"
 log using "log\ipolate_002", replace
@@ -57,4 +57,5 @@ order rate_f3, after(rate_f2)
 label var rate_f3 "Rate with filled values: method 3"
 
 ** Add graphic
+gr twoway line rate_f1 rate_f3 year if cid==2
 gr twoway line rate_f2 rate_f3 year if cid==2
