@@ -1,10 +1,11 @@
 ** CLOSE ANY OPEN LOG FILE AND OPEN A NEW LOG FILE
 capture log close
 ** New data path to encrypted dataset
-cd "X:\OneDrive - The University of the West Indies\repo_encrypted\data_test"
-** Local macro to hold LOG and DO file path
-local path "C:\Sync\OneDrive - The University of the West Indies\repo_datagroup\repo_test"
-log using "`path'/ipolate_002", replace
+cd "X:\OneDrive - The University of the West Indies\repo_encrypted\data_test\"
+mkdir log2
+** Local macro to hold DO file path
+local path "C:\Sync\OneDrive - The University of the West Indies\repo_datagroup\repo_test\do"
+log using "log\ipolate_002", replace
 
 **  GENERAL DO-FILE COMMENTS
 //  program:      ipolate_001.do
@@ -54,3 +55,6 @@ smooth 3rssh,twice rate_f1, gen(rate_f3)
 *ipolate rate_t1 year , gen(rate_f2) epolate
 order rate_f3, after(rate_f2)
 label var rate_f3 "Rate with filled values: method 3"
+
+** Add graphic
+gr twoway line rate_f2 rate_f3 year if cid==2
