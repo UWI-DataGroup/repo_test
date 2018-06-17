@@ -1,9 +1,9 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}C:\Sync\OneDrive - The University of the West Indies\repo_datagroup\repo_test/ipolate_002.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}17 Jun 2018, 07:54:46
+ {txt}opened on:  {res}17 Jun 2018, 08:19:45
 {txt}
 {com}. 
 . **  GENERAL DO-FILE COMMENTS
@@ -82,6 +82,10 @@
 {txt}
 {com}. label var rate_f3 "Rate with filled values: method 3"
 {txt}
+{com}. 
+. ** Plot the resulting graph for Barbados
+. gr twoway line rate_f2 rate_f3 year if cid==2
+{res}{txt}
 {com}. 
 {txt}end of do-file
 

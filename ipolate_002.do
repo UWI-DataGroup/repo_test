@@ -54,3 +54,6 @@ smooth 3rssh,twice rate_f1, gen(rate_f3)
 *ipolate rate_t1 year , gen(rate_f2) epolate
 order rate_f3, after(rate_f2)
 label var rate_f3 "Rate with filled values: method 3"
+
+** Plot the resulting graph for Barbados
+gr twoway line rate_f2 rate_f3 year if cid==2
