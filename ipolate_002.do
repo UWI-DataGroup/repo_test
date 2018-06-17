@@ -1,7 +1,10 @@
 ** CLOSE ANY OPEN LOG FILE AND OPEN A NEW LOG FILE
 capture log close
-cd "C:\statistics\analysis\a999\003-ecological_predictors\2017-07"
-log using ipolate_001, replace
+** New data path to encrypted dataset
+cd "X:\OneDrive - The University of the West Indies\repo_encrypted\data_test"
+** Local macro to hold LOG and DO file path
+local path "C:\Sync\OneDrive - The University of the West Indies\repo_datagroup\repo_test"
+log using "`path'/ipolate_002", replace
 
 **  GENERAL DO-FILE COMMENTS
 //  program:      ipolate_001.do
