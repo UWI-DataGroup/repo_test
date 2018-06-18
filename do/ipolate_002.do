@@ -64,7 +64,7 @@ graph twoway
   /// Line 1
   (line rate_f2 year if cid==2, lc(gs0) lw(0.05) fc("204 235 197"))
   /// Line 2
-  (line rate_f3 year if cid==2, lc(gs10) lw(0.05) fc("254 217 166"))
+  (line rate_f3 year if cid==2, lc(red) lw(0.05) fc("254 217 166"))
   ,
 
   plotregion(c(gs16) ic(gs16) ilw(thin) lw(thin))
@@ -84,5 +84,5 @@ graph twoway
   )
   legend(region(lcolor(none))
   )
-  ;
+;
 #delimit cr
