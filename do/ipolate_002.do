@@ -56,6 +56,33 @@ smooth 3rssh,twice rate_f1, gen(rate_f3)
 order rate_f3, after(rate_f2)
 label var rate_f3 "Rate with filled values: method 3"
 
-** Add graphic
-gr twoway line rate_f1 rate_f3 year if cid==2
-gr twoway line rate_f2 rate_f3 year if cid==2
+** Make graphic nicer
+
+#delimit ;
+
+graph twoway
+  /// Line 1
+  (line rate_f2 year if cid==2, lc(gs0) lw(0.05) fc("204 235 197"))
+  /// Line 2
+  (line rate_f3 year if cid==2, lc(gs10) lw(0.05) fc("254 217 166"))
+  ,
+
+  plotregion(c(gs16) ic(gs16) ilw(thin) lw(thin))
+  graphregion(c(gs16) ic(gs16) ilw(thin) lw(thin))
+  ysize(15) xsize(12.5)
+
+  ///xlabel(-1 "-100%" -.5 "-50%" 0 "0" .5 "50%" 1 "100%" 1.5 "150%" 2 "200%", labsize(2))
+
+  ylabel(, notick valuelabel angle(0) labsize(3))
+  ///ytitle("") xtitle("Mortality rate",margin(top))
+  yscale(noline)
+
+  legend( order(1 2)
+  label(3 "Fitted line 1")
+  label(2 "Fitted line 2")
+  cols(1) size(3) symysize(3) symxsize(3)
+  )
+  legend(region(lcolor(none))
+  )
+  ;
+#delimit cr
