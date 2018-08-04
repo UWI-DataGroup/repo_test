@@ -2,7 +2,7 @@
 *.smcl
 *.log
 
-** data files
+** common data files used in Stata
 *.dta
 *.xls
 *.xlsx
