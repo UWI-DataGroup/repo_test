@@ -1,0 +1,12 @@
+# log files
+*.smcl
+*.log
+
+# data files
+*.dta
+*.xls
+*.xlsx
+*.csv
+*.txt
+*.dct
+
