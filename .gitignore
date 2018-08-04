@@ -2,11 +2,10 @@
 *.smcl
 *.log
 
-# data files
+** data files
 *.dta
 *.xls
 *.xlsx
 *.csv
 *.txt
 *.dct
-

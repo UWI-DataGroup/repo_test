@@ -1,11 +1,11 @@
 ** CLOSE ANY OPEN LOG FILE AND OPEN A NEW LOG FILE
 capture log close
 ** New data path to encrypted dataset
-cd "X:\OneDrive - The University of the West Indies\repo_encrypted\data_test\"
+cd "X:\OneDrive - The University of the West Indies\repo_datagroup\repo_test\"
 cap mkdir log
 ** Local macro to hold DO file path
-local path "C:\Sync\OneDrive - The University of the West Indies\repo_datagroup\repo_test\do"
-log using "log\ipolate_002", replace
+local path "C:\Sync\OneDrive - The University of the West Indies\repo_datagroup\repo_test\"
+log using "ipolate_002.smcl", replace
 
 **  GENERAL DO-FILE COMMENTS
 //  program:      ipolate_001.do
