@@ -3,9 +3,10 @@
 *.log
 
 ** common data files used in Stata
-*.dta
-*.xls
-*.xlsx
-*.csv
-*.txt
-*.dct
+** Not used in this repository. All data aggregated
+** *.dta
+** *.xls
+** *.xlsx
+** *.csv
+** *.txt
+** *.dct

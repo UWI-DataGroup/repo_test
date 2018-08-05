@@ -30,7 +30,9 @@ drop country
 order cid
 
 ** Example usng Antigua
-keep if cid==2 & sex==1
+** keep if cid==2 & sex==1
+** Example using Babbados
+keep if cid==5 & sex==1
 
 ** Register missing as missing
 mvdecode actual , mv(0=.)
@@ -62,9 +64,9 @@ label var rate_f3 "Rate with filled values: method 3"
 
 graph twoway
   /// Line 1
-  (line rate_f2 year if cid==2, lc(gs0) lw(0.05) fc("204 235 197"))
+  (line rate_f2 year , lc(gs0) lw(0.05) fc("204 235 197"))
   /// Line 2
-  (line rate_f3 year if cid==2, lc(red) lw(0.05) fc("254 217 166"))
+  (line rate_f3 year , lc(red) lw(0.05) fc("254 217 166"))
   ,
 
   plotregion(c(gs16) ic(gs16) ilw(thin) lw(thin))
