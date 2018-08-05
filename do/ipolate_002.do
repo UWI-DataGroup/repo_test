@@ -30,9 +30,9 @@ drop country
 order cid
 
 ** Example usng Antigua
-keep if cid==2 & sex==1
+** keep if cid==2 & sex==1
 ** Example using Babbados
-** keep if cid==5 & sex==1
+keep if cid==5 & sex==1
 
 ** Register missing as missing
 mvdecode actual , mv(0=.)
