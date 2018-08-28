@@ -1,26 +1,32 @@
-** CLOSE ANY OPEN LOG FILE AND OPEN A NEW LOG FILE
-capture log close
-** New data path to encrypted dataset
-cd "X:\OneDrive - The University of the West Indies\repo_datagroup\repo_test\"
-cap mkdir log
-** Local macro to hold DO file path
-local path "C:\Sync\OneDrive - The University of the West Indies\repo_datagroup\repo_test\"
-log using "ipolate_002.smcl", replace
+** HEADER -----------------------------------------------------
+**  DO-FILE METADATA
+//  algorithm name			    ipolate_002.do
+//  project:				        Ipolate missing data
+//  analysts:						    Ian HAMBLETON
+//	date last modified	    28-Aug-2018
+//  algorithm task			    Plotting mortality data
 
-**  GENERAL DO-FILE COMMENTS
-//  program:      ipolate_001.do
-//  project:      Ipolate missing data
-//  author:       HAMBLETON \ 16-JUL-2017
-
-** DO-FILE SET UP COMMANDS
+** General algorithm set-up
 version 15
 clear all
 macro drop _all
 set more 1
 set linesize 80
 
+** Set working directories: this is for DATASET and LOGFILE import and export
+** DATASETS to encrypted SharePoint folder
+local datapath "X:\The University of the West Indies\DataGroup - repo_data\data_test"
+** LOGFILES to unencrypted OneDrive folder
+local logpath X:\OneDrive - The University of the West Indies\repo_datagroup\repo_test
+
+** Close any open log fileand open a new log file
+capture log close
+cap log using "`logpath'\ipolate_002", replace
+** HEADER -----------------------------------------------------
+
+
 ** Load dataset
-use ageadjustedrates.dta, clear
+use "`datapath'\version01\1-input\ageadjustedrates.dta", clear
 
 ** Numeric for country
 egen cid = group(country)
