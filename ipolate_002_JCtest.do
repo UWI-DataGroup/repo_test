@@ -72,7 +72,7 @@ graph twoway
   /// Line 1
   (line rate_f2 year , lc(gs0) lw(0.05) fc(purple))
   /// Line 2
-  (line rate_f3 year , lc(red) lw(0.05) fc(pink))
+  (line rate_f3 year , lc(red) lw(0.05) fc(brown))
   ,
 
   plotregion(c(gs16) ic(gs16) ilw(thin) lw(thin))
