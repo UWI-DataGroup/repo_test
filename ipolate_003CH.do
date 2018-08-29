@@ -30,3 +30,5 @@ use "`datapath'\version01\1-input\ageadjustedrates.dta", clear
 
 codebook year
 codebook country
+tab year
+tab country 
