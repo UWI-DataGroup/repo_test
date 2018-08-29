@@ -30,3 +30,4 @@ use "`datapath'\version01\1-input\ageadjustedrates.dta", clear
 
 codebook year
 codebook country
+ttest actual sex 
