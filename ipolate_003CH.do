@@ -29,3 +29,4 @@ cap log using "`logpath'\ipolate_002", replace
 use "`datapath'\version01\1-input\ageadjustedrates.dta", clear
 
 codebook year
+codebook country
