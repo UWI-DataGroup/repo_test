@@ -24,6 +24,7 @@ capture log close
 cap log using "`logpath'\ipolate_002", replace
 ** HEADER -----------------------------------------------------
 
+
 ** Load dataset
 use "`datapath'\version01\1-input\ageadjustedrates.dta", clear
 
@@ -71,7 +72,7 @@ graph twoway
   /// Line 1
   (line rate_f2 year , lc(gs0) lw(0.05) fc(purple))
   /// Line 2
-  (line rate_f3 year , lc(red) lw(0.05) fc(yellow))
+  (line rate_f3 year , lc(red) lw(0.05) fc(pink))
   ,
 
   plotregion(c(gs16) ic(gs16) ilw(thin) lw(thin))
