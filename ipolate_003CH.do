@@ -31,4 +31,8 @@ use "`datapath'\version01\1-input\ageadjustedrates.dta", clear
 codebook year
 codebook country
 ttest actual sex
+<<<<<<< HEAD
 gr twoway line actual year if cid==5
+=======
+** Comment instead of a graph 
+>>>>>>> master
