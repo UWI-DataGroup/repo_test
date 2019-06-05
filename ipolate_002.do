@@ -70,7 +70,7 @@ label var rate_f3 "Rate with filled values: method 3"
 
 graph twoway
   /// Line 1
-  (line rate_f2 year , lc(gs0) lw(0.05) fc(purple))
+  (line rate_f2 year , lc(gs0) lw(0.05) fc(green))
   /// Line 2
   (line rate_f3 year , lc(red) lw(0.05) fc("254 217 166"))
   ,

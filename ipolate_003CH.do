@@ -30,5 +30,10 @@ use "`datapath'\version01\1-input\ageadjustedrates.dta", clear
 
 codebook year
 codebook country
+<<<<<<< HEAD
 tab year
 tab country 
+=======
+ttest actual sex
+** Comment instead of a graph 
+>>>>>>> caced67edca69bfc9d5ae397f64796251789d252
