@@ -38,7 +38,7 @@ order cid
 ** Example usng Antigua
 ** keep if cid==2 & sex==1
 ** Example using Babbados
-keep if cid==5 & sex==1
+keep if cid==2 & sex==1
 
 ** Register missing as missing
 mvdecode actual , mv(0=.)
@@ -85,9 +85,9 @@ graph twoway
   ///ytitle("") xtitle("Mortality rate",margin(top))
   yscale(noline)
 
-  legend( order(1 2 3)
-  label(3 "Fitted line One")
-  label(2 "Fitted line Two")
+  legend( order(1 2)
+  label(3 "Fitted line 1")
+  label(2 "Fitted line 2")
   cols(1) size(3) symysize(3) symxsize(3)
   )
   legend(region(lcolor(none))
